@@ -1,3 +1,24 @@
+/* ===== CONFIDENTIAL BANNER ===== */
+#confidential-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8b0000; /* dark red */
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 10px;
+  font-size: 0.95em;
+  z-index: 9999;
+  border-bottom: 2px solid #ff4444;
+}
+
+/* Push content down so it doesn't hide under the fixed banner */
+body {
+  padding-top: 60px; /* Adjust if banner height changes */
+}
+
 /* ===== DARK THEME BASE ===== */
 body {
   font-family: Arial, sans-serif;
