@@ -170,3 +170,48 @@ footer {
   padding-top: 10px;
   text-align: center;
 }
+
+/* ===== COURT FILINGS TABLE ===== */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #111;
+  padding: 10px;
+}
+
+.case-filings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.case-filings-table th, .case-filings-table td {
+  border: 1px solid #333;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.case-filings-table th {
+  background-color: #1a1a1a;
+  color: #66b2ff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.case-filings-table tr:nth-child(even) {
+  background-color: #141414;
+}
+
+.case-filings-table tr:nth-child(odd) {
+  background-color: #0e0e0e;
+}
+
+.case-filings-table td {
+  color: #eee;
+  word-break: break-word;
+}
+
