@@ -274,16 +274,16 @@ footer {
   background-color: #141414;
 }
 
-/* ===== SIGNATURE COMPARISON TABLE (CENTERED FULL-SIZE PREVIEW, OVERLAY FIX) ===== */
+/* ===== SIGNATURE COMPARISON TABLE (FULL BLOCK) ===== */
 .signature-comparison-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95em;
   margin-top: 20px;
-  overflow: visible;
+  overflow: visible; /* allow hover overlay to extend beyond cells */
 }
 
-/* Cell & header styling */
+/* Cells & headers */
 .signature-comparison-table th,
 .signature-comparison-table td {
   border: 1px solid #333;
@@ -292,61 +292,76 @@ footer {
   vertical-align: top;
 }
 
-.signature-comparison-table th { background-color: #1a1a1a; color: #66b2ff; }
-.signature-comparison-table td { color: #eee; word-break: break-word; }
+.signature-comparison-table th {
+  background-color: #1a1a1a;
+  color: #66b2ff;
+}
+
+.signature-comparison-table td {
+  color: #eee;
+  word-break: break-word;
+}
+
+/* Row striping */
 .signature-comparison-table tr:nth-child(even) { background-color: #141414; }
 .signature-comparison-table tr:nth-child(odd)  { background-color: #0e0e0e; }
 
 /* Links */
-.signature-comparison-table a { color: #66b2ff; text-decoration: none; }
-.signature-comparison-table a:hover { text-decoration: underline; }
+.signature-comparison-table a {
+  color: #66b2ff;
+  text-decoration: none;
+}
+.signature-comparison-table a:hover {
+  text-decoration: underline;
+}
 
-/* Thumbnails */
+/* ===== Thumbnails (table images) =====
+   - Change max-width to adjust thumbnail size (e.g., 240px).
+   - For full-size directly in table: set max-width:none; width:100%. */
 .signature-comparison-table img {
   display: block;
   margin: 0 auto;
   border: 1px solid #333;
   border-radius: 4px;
-  transition: transform 0.2s ease-in-out;
-  max-width: 240px;     /* thumbnail size */
-  /* To show full-size in the table:
-     max-width: none;
-     width: 100%; */
+  max-width: 240px;  /* thumbnail size */
   height: auto;
   cursor: zoom-in;
+  transition: none;  /* no animation on hover */
 }
 
-/* Anchor wrapper for preview */
+/* Anchor wrapper (for hover behavior) */
 .signature-comparison-table td a {
   position: relative;
   display: inline-block;
-  z-index: 1;           /* base above table cells */
+  z-index: 1;
 }
 
-/* >>> Overlay keeps :hover active across the screen so image can stay centered <<< */
+/* ===== FULL-SIZE PREVIEW ON HOVER (centered, instant, no flicker) =====
+   - The overlay keeps :hover active so the preview doesn't flicker.
+   - The image is fixed & centered; no zoom/motion effects. */
 .signature-comparison-table td a:hover::before {
   content: "";
   position: fixed;
-  inset: 0;             /* full viewport */
-  background: rgba(0,0,0,0.6);  /* dim backdrop */
+  inset: 0;                       /* full viewport */
+  background: rgba(0,0,0,0.7);    /* dim page behind preview */
   z-index: 9998;
-  pointer-events: none; /* don't block clicks if user moves off */
+  pointer-events: none;           /* overlay doesn't steal the cursor */
 }
 
-/* Centered full-size image on hover (overrides thumbnail size) */
 .signature-comparison-table td a:hover img {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  width: auto !important;
+  width: auto !important;         /* override any HTML width attrs */
   height: auto !important;
-  max-width: 85vw !important;
+  max-width: 85vw !important;     /* cap to viewport */
   max-height: 85vh !important;
-  z-index: 10000;
+  z-index: 9999;
   border: 1px solid #66b2ff;
   border-radius: 6px;
-  box-shadow: 0 0 20px rgba(102,178,255,0.5);
+  box-shadow: 0 0 20px rgba(102,178,255,0.6);
   background: #000;
   cursor: zoom-out;
+  transition: none;               /* instant — no fade, no movement */
 }
