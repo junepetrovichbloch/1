@@ -274,14 +274,16 @@ footer {
   background-color: #141414;
 }
 
-/* ===== SIGNATURE COMPARISON TABLE (7-COLUMN STRUCTURE) ===== */
+/* ===== SIGNATURE COMPARISON TABLE (FINAL, FULL VERSION) ===== */
 .signature-comparison-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95em;
   margin-top: 20px;
+  overflow: visible;
 }
 
+/* Cell & header styling */
 .signature-comparison-table th,
 .signature-comparison-table td {
   border: 1px solid #333;
@@ -308,6 +310,7 @@ footer {
   background-color: #0e0e0e;
 }
 
+/* Link styles */
 .signature-comparison-table a {
   color: #66b2ff;
   text-decoration: none;
@@ -317,21 +320,33 @@ footer {
   text-decoration: underline;
 }
 
+/* Thumbnail image styling */
 .signature-comparison-table img {
   display: block;
   margin: 0 auto;
   border: 1px solid #333;
   border-radius: 4px;
-}
-.signature-comparison-table img {
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #333;
-  border-radius: 4px;
-  transition: transform 0.2s ease-in-out; /* smooth animation */
+  transition: transform 0.2s ease-in-out;
+  max-width: 120px;
 }
 
-.signature-comparison-table img:hover {
-  transform: scale(1.25); /* slightly enlarge on hover */
-  border-color: #66b2ff;  /* subtle highlight to match theme */
+/* ===== FULL-SIZE IMAGE ON HOVER =====
+   When you hover over the thumbnail, a larger version pops up above it.
+   No HTML or JS changes needed. */
+.signature-comparison-table td a {
+  position: relative;
+  display: inline-block;
+}
+
+.signature-comparison-table td a:hover img {
+  position: absolute;
+  top: -10px;             /* moves popup slightly above thumbnail */
+  left: 130%;             /* positions popup to the right of thumbnail */
+  z-index: 999;
+  max-width: 600px;       /* full-size width */
+  max-height: 600px;
+  border: 1px solid #66b2ff;
+  box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
+  background-color: #000;
+  transform: none;        /* disable scaling; use real full size */
 }
