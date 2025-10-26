@@ -274,7 +274,7 @@ footer {
   background-color: #141414;
 }
 
-/* ===== SIGNATURE COMPARISON TABLE (FINAL, FULL VERSION) ===== */
+/* ===== SIGNATURE COMPARISON TABLE (CENTERED FULL-SIZE PREVIEW) ===== */
 .signature-comparison-table {
   width: 100%;
   border-collapse: collapse;
@@ -330,23 +330,28 @@ footer {
   max-width: 120px;
 }
 
-/* ===== FULL-SIZE IMAGE ON HOVER =====
-   When you hover over the thumbnail, a larger version pops up above it.
-   No HTML or JS changes needed. */
+/* ===== FULL-SIZE IMAGE CENTERED ON HOVER ===== */
 .signature-comparison-table td a {
   position: relative;
   display: inline-block;
 }
 
+/* Hover effect: image appears centered over the table */
 .signature-comparison-table td a:hover img {
-  position: absolute;
-  top: -10px;             /* moves popup slightly above thumbnail */
-  left: 130%;             /* positions popup to the right of thumbnail */
-  z-index: 999;
-  max-width: 600px;       /* full-size width */
-  max-height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 85vw;       /* up to 85% of viewport width */
+  max-height: 85vh;      /* up to 85% of viewport height */
+  z-index: 10000;
   border: 1px solid #66b2ff;
-  box-shadow: 0 0 10px rgba(102, 178, 255, 0.3);
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(102, 178, 255, 0.5);
   background-color: #000;
-  transform: none;        /* disable scaling; use real full size */
+}
+
+/* Ensure table and page content appear beneath preview */
+.signature-comparison-table {
+  overflow: visible;
 }
