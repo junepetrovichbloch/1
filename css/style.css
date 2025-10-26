@@ -323,7 +323,7 @@ footer {
   margin: 0 auto;
   border: 1px solid #333;
   border-radius: 4px;
-  max-width: 360px;  /* thumbnail size */
+  max-width: 500px;  /* thumbnail size */
   height: auto;
   cursor: default;   /* was zoom-in; changed to default since hover disabled */
   transition: none;
