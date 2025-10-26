@@ -233,7 +233,7 @@ footer {
   background-color: #0e0e0e;
   border-radius: 6px;
   width: fit-content;         /* only as wide as needed */
-  max-width: 80%;             /* prevent it from being too wide on large screens */
+  max-width: 50%;             /* prevent it from being too wide on large screens */
   box-shadow: 0 0 8px rgba(102, 178, 255, 0.15);
 }
 
