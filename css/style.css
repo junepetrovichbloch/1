@@ -274,4 +274,53 @@ footer {
   background-color: #141414;
 }
 
+/* ===== SIGNATURE COMPARISON TABLE ===== */
+.signature-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  margin-top: 20px;
+}
+
+.signature-comparison-table th,
+.signature-comparison-table td {
+  border: 1px solid #333;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.signature-comparison-table th {
+  background-color: #1a1a1a;
+  color: #66b2ff;
+}
+
+.signature-comparison-table td {
+  color: #eee;
+  word-break: break-word;
+}
+
+.signature-comparison-table tr:nth-child(even) {
+  background-color: #141414;
+}
+
+.signature-comparison-table tr:nth-child(odd) {
+  background-color: #0e0e0e;
+}
+
+.signature-comparison-table a {
+  color: #66b2ff;
+  text-decoration: none;
+}
+
+.signature-comparison-table a:hover {
+  text-decoration: underline;
+}
+
+.signature-comparison-table img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
 
