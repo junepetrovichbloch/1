@@ -6,7 +6,7 @@
   background-color: #8b0000; /* dark red */
   color: #fff;
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
   padding: 16px 25px; /* increased horizontal padding */
   font-size: 0.95em;
   z-index: 9999;
