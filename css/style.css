@@ -308,7 +308,10 @@ footer {
   border: 1px solid #333;
   border-radius: 4px;
   transition: transform 0.2s ease-in-out;
-  max-width: 120px;     /* thumbnail size */
+  max-width: 240px;     /* thumbnail size */
+  /* To show full-size in the table:
+     max-width: none;
+     width: 100%; */
   height: auto;
   cursor: zoom-in;
 }
