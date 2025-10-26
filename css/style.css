@@ -223,3 +223,47 @@ footer {
   word-break: break-word;
 }
 
+/* ===== LEGEND BOX STYLES ===== */
+.legend-box {
+  margin-left: 40px;          /* indent from left */
+  margin-bottom: 25px;
+  padding: 15px;
+  border-left: 3px solid #66b2ff;
+  background-color: #0e0e0e;
+  border-radius: 6px;
+  max-width: 90%;
+}
+
+.legend-box h4 {
+  color: #66b2ff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.legend-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.legend-table th,
+.legend-table td {
+  border: 1px solid #333;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+.legend-table th {
+  background-color: #1a1a1a;
+  color: #66b2ff;
+  text-align: left;
+}
+
+.legend-table td {
+  color: #eee;
+}
+
+.legend-table tr:nth-child(even) {
+  background-color: #141414;
+}
+
