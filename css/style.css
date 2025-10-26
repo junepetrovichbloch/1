@@ -103,6 +103,11 @@ nav#toc a:hover {
   text-decoration: underline;
 }
 
+nav#toc ul ul {
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
 /* ===== TABLES ===== */
 table {
   width: 100%;
