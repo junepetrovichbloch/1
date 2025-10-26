@@ -223,27 +223,32 @@ footer {
   word-break: break-word;
 }
 
-/* ===== LEGEND BOX STYLES ===== */
+/* ===== LEGEND BOX STYLES (UPDATED) ===== */
 .legend-box {
-  margin-left: 40px;          /* indent from left */
+  margin-left: 100px;          /* deeper indentation from the left */
+  margin-top: 20px;
   margin-bottom: 25px;
-  padding: 15px;
+  padding: 15px 20px;
   border-left: 3px solid #66b2ff;
   background-color: #0e0e0e;
   border-radius: 6px;
-  max-width: 90%;
+  width: fit-content;         /* only as wide as needed */
+  max-width: 80%;             /* prevent it from being too wide on large screens */
+  box-shadow: 0 0 8px rgba(102, 178, 255, 0.15);
 }
 
 .legend-box h4 {
   color: #66b2ff;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  text-align: left;
 }
 
 .legend-table {
-  width: 100%;
   border-collapse: collapse;
   font-size: 0.95em;
+  width: auto;                /* table shrinks to content */
+  margin-left: 10px;          /* aligns neatly within box */
 }
 
 .legend-table th,
@@ -251,6 +256,7 @@ footer {
   border: 1px solid #333;
   padding: 8px 12px;
   vertical-align: top;
+  white-space: nowrap;        /* keeps short labels compact */
 }
 
 .legend-table th {
@@ -261,9 +267,11 @@ footer {
 
 .legend-table td {
   color: #eee;
+  white-space: normal;        /* allows text in meaning column to wrap naturally */
 }
 
 .legend-table tr:nth-child(even) {
   background-color: #141414;
 }
+
 
