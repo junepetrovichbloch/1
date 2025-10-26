@@ -274,7 +274,7 @@ footer {
   background-color: #141414;
 }
 
-/* ===== SIGNATURE COMPARISON TABLE (FULL BLOCK) ===== */
+/* ===== SIGNATURE COMPARISON TABLE (FULL BLOCK, HOVER DISABLED OPTION) ===== */
 .signature-comparison-table {
   width: 100%;
   border-collapse: collapse;
@@ -323,29 +323,28 @@ footer {
   margin: 0 auto;
   border: 1px solid #333;
   border-radius: 4px;
-  max-width: 240px;  /* thumbnail size */
+  max-width: 360px;  /* thumbnail size */
   height: auto;
-  cursor: zoom-in;
-  transition: none;  /* no animation on hover */
+  cursor: default;   /* was zoom-in; changed to default since hover disabled */
+  transition: none;
 }
 
-/* Anchor wrapper (for hover behavior) */
+/* Anchor wrapper (for hover behavior)
+   >>> COMMENT OUT this block to completely disable the hover preview <<< */
+/*
 .signature-comparison-table td a {
   position: relative;
   display: inline-block;
   z-index: 1;
 }
 
-/* ===== FULL-SIZE PREVIEW ON HOVER (centered, instant, no flicker) =====
-   - The overlay keeps :hover active so the preview doesn't flicker.
-   - The image is fixed & centered; no zoom/motion effects. */
 .signature-comparison-table td a:hover::before {
   content: "";
   position: fixed;
-  inset: 0;                       /* full viewport */
-  background: rgba(0,0,0,0.7);    /* dim page behind preview */
+  inset: 0;
+  background: rgba(0,0,0,0.7);
   z-index: 9998;
-  pointer-events: none;           /* overlay doesn't steal the cursor */
+  pointer-events: none;
 }
 
 .signature-comparison-table td a:hover img {
@@ -353,9 +352,9 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  width: auto !important;         /* override any HTML width attrs */
+  width: auto !important;
   height: auto !important;
-  max-width: 85vw !important;     /* cap to viewport */
+  max-width: 85vw !important;
   max-height: 85vh !important;
   z-index: 9999;
   border: 1px solid #66b2ff;
@@ -363,5 +362,6 @@ footer {
   box-shadow: 0 0 20px rgba(102,178,255,0.6);
   background: #000;
   cursor: zoom-out;
-  transition: none;               /* instant — no fade, no movement */
+  transition: none;
 }
+*/
