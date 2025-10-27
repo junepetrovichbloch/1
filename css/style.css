@@ -402,26 +402,3 @@ footer {
 /* Family tree image embed */
 .tree-image { text-align: center; margin: 20px 0; }
 .tree-image img { max-width: 100%; height: auto; border: 1px solid #333; border-radius: 6px; }
-
-
-/* ==============================================*/
-/* ===== Banner (CSS-only hide) ===== */
-.banner{
-  position:fixed; top:0; left:0; width:100%;
-  background:#660000; color:#fff;
-  padding:12px 40px 12px 20px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.5);
-  z-index:9999;
-}
-.banner p{ margin:0; }
-.banner-close{
-  position:absolute; right:15px; top:8px;
-  background:transparent; border:none; color:#fff;
-  font-size:1.2em; cursor:pointer; user-select:none;
-  text-decoration:none;
-  transition:color .2s ease-in-out;
-}
-.banner-close:hover{ color:#ff9999; }
-
-/* Hide banner when checkbox is checked */
-#hide-banner:checked ~ #top-banner{ display:none; }
