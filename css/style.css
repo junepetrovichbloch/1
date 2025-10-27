@@ -485,8 +485,10 @@ nav#toc a {
 }
 
 nav#toc a:hover {
-  text-decoration: underline;
+  color: #99ccff;
+  text-decoration: none;
 }
+
 
 nav#toc ul ul {
   margin-left: 20px;
@@ -697,7 +699,8 @@ footer {
   text-decoration: none;
 }
 .signature-comparison-table a:hover {
-  text-decoration: underline;
+  color: #99ccff;
+  text-decoration: none;
 }
 
 /* ===== Thumbnails (table images) =====
