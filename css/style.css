@@ -484,11 +484,12 @@ nav#toc a {
   text-decoration: none;
 }
 
+/*====
 nav#toc a:hover {
   color: #99ccff;
   text-decoration: none;
 }
-
+====*/
 
 nav#toc ul ul {
   margin-left: 20px;
@@ -698,10 +699,13 @@ footer {
   color: #66b2ff;
   text-decoration: none;
 }
+
+/* ====
 .signature-comparison-table a:hover {
   color: #99ccff;
   text-decoration: none;
 }
+==== */
 
 /* ===== Thumbnails (table images) =====
    - Change max-width to adjust thumbnail size (e.g., 240px).
