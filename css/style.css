@@ -1,25 +1,16 @@
 #confidential-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8b0000; /* dark red */
+  position: static;               /* not fixed; scrolls away */
+  background-color: #8b0000;
   color: #fff;
   text-align: center;
   font-weight: normal;
-  padding: 16px 25px; /* increased horizontal padding */
+  padding: 16px 25px;
   font-size: 0.95em;
-  z-index: 9999;
   border-bottom: 2px solid #ff4444;
-  box-sizing: border-box; /* ensures padding stays inside width */
-  word-wrap: break-word;  /* allows wrapping of long words */
-  overflow-wrap: break-word; /* ensures wrapping works across browsers */
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   line-height: 1.5;
-}
-
-/* Push content down so it doesn't hide under the fixed banner */
-body {
-  padding-top: 60px; /* Adjust if banner height changes */
 }
 
 /* ===== DARK THEME BASE ===== */
@@ -29,6 +20,7 @@ body {
   color: #ddd; /* changed from #fff */
   line-height: 1.76;
   margin: 40px;
+  padding-top: 10;                 /* remove offset used for fixed banner */
 }
 
 /* ===== HEADERS ===== */
