@@ -12,29 +12,28 @@
 </head>
 <body>
 
-<script>
-  (function(){
-    const PASS = "trust";
-    const allowed = sessionStorage.getItem("ft_access") === "granted";
-    if (!allowed) {
-      const attempt = prompt("Enter passphrase to view site:");
-      if (attempt === PASS) {
-        sessionStorage.setItem("ft_access", "granted");
-      } else {
-        document.documentElement.innerHTML = "<body style='font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; padding:2rem;'><h1>Access restricted</h1><p>If you believe you should have access, please contact the site owner.</p></body>";
-      }
-    }
-  })();
-</script>
+  <!-- ===== CONFIDENTIAL ACCESS OVERLAY ===== -->
+<div id="access-overlay">
+  <div class="access-box">
+    <h2>Confidential Access Notice</h2>
+    <p>This website and all materials herein are confidential and intended solely for authorized representatives of Fiduciary Trust International. 
+    Unauthorized access, disclosure, or distribution of its contents is strictly prohibited.</p>
 
-  
+    <p>By continuing, you confirm that you are an authorized recipient and agree to keep this material private.</p>
+
+    <input type="password" id="access-input" placeholder="Enter access phrase">
+    <button id="access-button">Enter</button>
+  </div>
+</div>
+
+  <!--
   <div id="confidential-banner">
   ⚠️ <strong>CONFIDENTIAL NOTICE:</strong> This webpage and all information contained herein are intended solely for authorized personnel of <a href="https://www.fiduciarytrust.com/" target="_blank" rel="noopener noreferrer">
   Fiduciary Trust International </a> in connection with its internal business operations. Under no circumstances may this website or personal information about the developer/pro se contestant, Jaden Alexandra Riley, be
   shared, copied, or reviewed by any member of the family, opposing counsel <a href="https://www.ohsks.com/" target="_blank" rel="noopener noreferrer"> Osborne, Helman, Scott, Knisely & Stanton, LLP</a>, or any 
   representative of <a href="https://koalaw.com/" target="_blank" rel="noopener noreferrer"> Kuperman, Orr & Albers, P.C.</a> Unauthorized access, distribution, or disclosure is strictly prohibited.
 </div>
-
+-->
 
   <header id="top">
     <h1>Contested Estate of June Petrovich Bloch (<a href="https://www.legacy.com/us/obituaries/statesman/name/june-bloch-obituary?id=59092423" target="_blank" rel="noopener noreferrer">Obituary</a>)</h1>
@@ -723,6 +722,24 @@ Disposition</td><td><a href="./doc/2025.02.12_Motion_for_Custody_of_Remains_and_
     <p>&copy; 2025 Jaden Alexandra Riley. All rights reserved.</p>
   </footer>
 
+<script>
+document.getElementById("access-button").addEventListener("click", function(){
+  const input = document.getElementById("access-input").value.trim();
+  const passphrase = "trust"; // replace with yours
+
+  if (input === passphrase) {
+    sessionStorage.setItem("access_granted", "true");
+    document.getElementById("access-overlay").style.display = "none";
+  } else {
+    alert("Access denied. Please check the passphrase and try again.");
+  }
+});
+
+// If already authorized this session, hide overlay immediately
+if (sessionStorage.getItem("access_granted") === "true") {
+  document.getElementById("access-overlay").style.display = "none";
+}
+</script>
 
 </body>
 </html>
