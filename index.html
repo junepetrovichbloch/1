@@ -17,7 +17,7 @@
     const PASS = "trust";
     const allowed = sessionStorage.getItem("ft_access") === "granted";
     if (!allowed) {
-      const attempt = prompt("Access required: enter passphrase to view site:");
+      const attempt = prompt("Enter passphrase to view site:");
       if (attempt === PASS) {
         sessionStorage.setItem("ft_access", "granted");
       } else {
