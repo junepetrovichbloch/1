@@ -304,7 +304,7 @@ footer {
 }
 
 /* Row striping */
-.signature-comparison-table tr:nth-child(even) { background-color: #141414; }
+.signature-comparison-table tr:nth-child(even) { background-color: #546e7a; } /* #141414 */
 .signature-comparison-table tr:nth-child(odd)  { background-color: #101010; }
 
 /* Links */
