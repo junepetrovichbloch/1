@@ -737,25 +737,27 @@ Disposition</td><td><a href="./doc/2025.02.12_Motion_for_Custody_of_Remains_and_
   </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("access-overlay");
-  const button = document.getElementById("access-button");
   const input = document.getElementById("access-input");
-  const passphrase = "PleaseUseYourRealPasswordHere"; // replace this
+  const button = document.getElementById("access-button");
+  const passphrase = "PleaseUseYourRealPasswordHere"; // change this
 
-  // Enable overlay input
-  overlay.classList.add("active");
-  document.body.style.pointerEvents = "none";  // block background
-  overlay.style.pointerEvents = "auto";
-
+  // 1. Hide overlay immediately if already authorized
   if (sessionStorage.getItem("access_granted") === "true") {
     overlay.style.display = "none";
     document.body.style.pointerEvents = "auto";
     return;
   }
 
-  button.addEventListener("click", () => {
-    if (input.value.trim() === passphrase) {
+  // 2. Ensure body is clickable only after login
+  document.body.style.pointerEvents = "none";
+  overlay.style.pointerEvents = "auto";
+
+  // 3. Function to check password
+  function checkPassword() {
+    const value = input.value.trim();
+    if (value === passphrase) {
       sessionStorage.setItem("access_granted", "true");
       overlay.style.display = "none";
       document.body.style.pointerEvents = "auto";
@@ -764,9 +766,21 @@ document.addEventListener("DOMContentLoaded", () => {
       input.value = "";
       input.focus();
     }
+  }
+
+  // 4. Handle button click
+  button.addEventListener("click", checkPassword);
+
+  // 5. Handle Enter key press
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      checkPassword();
+    }
   });
 });
 </script>
+
 
 
 
