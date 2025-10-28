@@ -4,10 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Signature Review Presentation and Documentation Portal" />
+  <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="googlebot" content="noindex, nofollow, noarchive">
+    <meta name="bingbot" content="noindex, nofollow, noarchive">
   <title>June P. Bloch</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+<script>
+  (function(){
+    const PASS = "trust";
+    const allowed = sessionStorage.getItem("ft_access") === "granted";
+    if (!allowed) {
+      const attempt = prompt("Access required: enter passphrase to view site:");
+      if (attempt === PASS) {
+        sessionStorage.setItem("ft_access", "granted");
+      } else {
+        document.documentElement.innerHTML = "<body style='font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; padding:2rem;'><h1>Access restricted</h1><p>If you believe you should have access, please contact the site owner.</p></body>";
+      }
+    }
+  })();
+</script>
+
   
   <div id="confidential-banner">
   ⚠️ <strong>CONFIDENTIAL NOTICE:</strong> This webpage and all information contained herein are intended solely for authorized personnel of <a href="https://www.fiduciarytrust.com/" target="_blank" rel="noopener noreferrer">
