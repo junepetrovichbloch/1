@@ -798,3 +798,14 @@ footer {
 /* Family tree image embed */
 .tree-image { text-align: center; margin: 20px 0; }
 .tree-image img { max-width: 100%; height: auto; border: 1px solid #333; border-radius: 6px; }
+
+
+/* ============================================================================ */
+/* ===== ANCHOR LINK OFFSET FOR FIXED BANNER ===== */
+:target::before {
+  content: "";
+  display: block;
+  height: 70px;       /* adjust to match banner height */
+  margin-top: -70px;  /* negative margin cancels natural scroll */
+}
+
