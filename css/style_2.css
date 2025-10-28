@@ -860,3 +860,29 @@ footer {
   }
 }
 
+#access-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  pointer-events: auto;  /* ✅ ensures clicks/typing go to overlay */
+}
+
+body {
+  pointer-events: none;  /* temporarily block background from capturing clicks */
+}
+
+#access-overlay.active ~ * {
+  pointer-events: none;  /* all siblings disabled until overlay closes */
+}
+
+
