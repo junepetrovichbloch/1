@@ -805,7 +805,7 @@ footer {
 :target::before {
   content: "";
   display: block;
-  height: 70px;       /* adjust to match banner height */
-  margin-top: -70px;  /* negative margin cancels natural scroll */
+  height: 80px;       /* adjust to match banner height */
+  margin-top: -80px;  /* negative margin cancels natural scroll */
 }
 
