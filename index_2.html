@@ -737,23 +737,31 @@ Disposition</td><td><a href="./doc/2025.02.12_Motion_for_Custody_of_Remains_and_
   </footer>
 
 <script>
-document.getElementById("access-button").addEventListener("click", function(){
-  const input = document.getElementById("access-input").value.trim();
-  const passphrase = "trust"; // replace with yours
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("access-overlay");
+  const button = document.getElementById("access-button");
+  const input = document.getElementById("access-input");
+  const passphrase = "PleaseUseYourRealPasswordHere"; // replace with your phrase
 
-  if (input === passphrase) {
-    sessionStorage.setItem("access_granted", "true");
-    document.getElementById("access-overlay").style.display = "none";
-  } else {
-    alert("Access denied. Please check the passphrase and try again.");
+  // Check if already authorized
+  if (sessionStorage.getItem("access_granted") === "true") {
+    overlay.style.display = "none";
+    return;
   }
-});
 
-// If already authorized this session, hide overlay immediately
-if (sessionStorage.getItem("access_granted") === "true") {
-  document.getElementById("access-overlay").style.display = "none";
-}
+  button.addEventListener("click", () => {
+    if (input.value.trim() === passphrase) {
+      sessionStorage.setItem("access_granted", "true");
+      overlay.style.display = "none";
+    } else {
+      alert("Access denied. Please check the passphrase and try again.");
+      input.value = "";
+      input.focus();
+    }
+  });
+});
 </script>
+
 
 </body>
 </html>
