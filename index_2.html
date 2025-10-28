@@ -741,11 +741,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("access-overlay");
   const button = document.getElementById("access-button");
   const input = document.getElementById("access-input");
-  const passphrase = "PleaseUseYourRealPasswordHere"; // replace with your phrase
+  const passphrase = "PleaseUseYourRealPasswordHere"; // replace this
 
-  // Check if already authorized
+  // Enable overlay input
+  overlay.classList.add("active");
+  document.body.style.pointerEvents = "none";  // block background
+  overlay.style.pointerEvents = "auto";
+
   if (sessionStorage.getItem("access_granted") === "true") {
     overlay.style.display = "none";
+    document.body.style.pointerEvents = "auto";
     return;
   }
 
@@ -753,6 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (input.value.trim() === passphrase) {
       sessionStorage.setItem("access_granted", "true");
       overlay.style.display = "none";
+      document.body.style.pointerEvents = "auto";
     } else {
       alert("Access denied. Please check the passphrase and try again.");
       input.value = "";
@@ -761,6 +767,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
 
 
 </body>
