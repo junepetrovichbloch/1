@@ -116,7 +116,7 @@ nav#toc a {
    TOC HOVER STATE
    ============================================================ */
 nav#toc a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* 99ccff* /
   text-decoration: none;
   /* potential conflict: an earlier commented-out hover rule prevented this
      from applying; this is the definitive active version */
@@ -136,7 +136,7 @@ a {
 }
 
 a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* 99ccff* /
   text-decoration: none; /* keeps underline off when hovered */
   /* duplicate of earlier rule – kept this one, removed the other */
 }
