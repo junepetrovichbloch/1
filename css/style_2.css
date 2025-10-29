@@ -1,248 +1,484 @@
-/* =============================================================
-   CLEANED AND ORGANIZED CSS (style_2.css)
-   -------------------------------------------------------------
-   Author: Jaden Alexandra Riley
-   Purpose: Development version of the Fiduciary Trust Case Site
-   Notes:
-   - All unused/duplicate code removed
-   - Comment headers added for clarity
-   - Optimized for readability & maintainability
-   ============================================================= */
-
-/* -------------------------------------------------------------
-   GLOBAL RESET AND BASE STYLES
-   ------------------------------------------------------------- */
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #000; /* Dark background theme */
-  color: #fff; /* Default text color */
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-}
-
-a {
-  color: #87cefa; /* Light blue links */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* -------------------------------------------------------------
-   PAGE LAYOUT STRUCTURE
-   ------------------------------------------------------------- */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-header, footer {
+/* ============================================================
+   CONFIDENTIAL BANNER
+   ============================================================ */
+#confidential-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8b0000; /* dark red */
+  color: #fff;
   text-align: center;
-  padding: 1rem;
-  background-color: #111;
-  border-bottom: 2px solid #8b0000;
+  font-weight: normal;
+  padding: 16px 25px; /* increased horizontal padding */
+  font-size: 0.95em;
+  z-index: 9999;
+  border-bottom: 2px solid #ff4444;
+  box-sizing: border-box;  /* ensures padding stays inside width */
+  word-wrap: break-word;   /* allows wrapping of long words */
+  overflow-wrap: break-word; /* ensures wrapping works across browsers */
+  line-height: 1.5;
 }
 
-footer {
-  border-top: 2px solid #8b0000;
-  border-bottom: none;
-  margin-top: 2rem;
-  font-size: 0.85em;
-  color: #bbb;
+/* ============================================================
+   GLOBAL BASE STYLES – DARK THEME
+   ============================================================ */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #ddd;             /* slightly dimmer than white */
+  line-height: 1.76;
+  margin: 40px;
+  padding-top: 60px;       /* ensures content not hidden by banner */
+  box-sizing: border-box;
+  /* duplicate of earlier rule – kept this one, removed the other */
 }
 
-/* -------------------------------------------------------------
+/* ============================================================
    HEADINGS
-   ------------------------------------------------------------- */
-h1, h2, h3, h4, h5 {
-  color: #87cefa; /* Sky blue headings */
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
+   ============================================================ */
 h1 {
-  border-bottom: 2px solid #8b0000;
-  padding-bottom: 0.5rem;
   font-size: 2em;
+  color: #87cefa; /* light sky blue */
+  margin-bottom: 10px;
+  /* duplicate of earlier rule – kept this one, removed the other */
 }
 
 h2 {
-  color: #ff4444; /* Red highlight for key sections */
-  margin-top: 2rem;
+  font-size: 1.5em;
+  color: #66b2ff;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
 }
 
 h3 {
   font-size: 1.3em;
-  margin-top: 1.5rem;
-  color: #87cefa;
+  color: #5dade2;
 }
 
-/* -------------------------------------------------------------
-   TABLES (used for signature comparisons, probate data, etc.)
-   ------------------------------------------------------------- */
-table {
+h4 {
+  font-size: 1.1em;
+  color: #4fa3ff;
+}
+
+h5, h6 {
+  font-size: 1em;
+  color: #70cfff;
+}
+
+/* ============================================================
+   PARAGRAPHS & LISTS
+   ============================================================ */
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #ddd;
+  /* duplicate of earlier rule – kept this one, removed the other */
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+li {
+  color: #ddd;
+}
+
+/* ============================================================
+   NAVIGATION – TABLE OF CONTENTS (TOC)
+   ============================================================ */
+nav#toc {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 5px;
+  /* duplicate of earlier rule – kept this one, removed the other */
+}
+
+nav#toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav#toc li {
+  margin: 8px 0;
+}
+
+nav#toc a {
+  color: #87cefa;
+  text-decoration: none;
+  /* duplicate of earlier rule – kept this one, removed the other */
+}
+
+/* ============================================================
+   TOC HOVER STATE
+   ============================================================ */
+nav#toc a:hover {
+  color: #99ccff;
+  text-decoration: none;
+  /* potential conflict: an earlier commented-out hover rule prevented this
+     from applying; this is the definitive active version */
+}
+
+nav#toc ul ul {
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
+/* ============================================================
+   GLOBAL LINK STYLES
+   ============================================================ */
+a {
+  color: #66b2ff;
+  text-decoration: none; /* removes underline */
+}
+
+a:hover {
+  color: #99ccff;
+  text-decoration: none; /* keeps underline off when hovered */
+  /* duplicate of earlier rule – kept this one, removed the other */
+}
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 0.9em;
+  background-color: #222;
+  padding: 6px 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #66b2ff;
+}
+
+.back-to-top:hover {
+  background-color: #333;
+}
+
+/* ============================================================
+   IMAGES
+   ============================================================ */
+img {
+  display: block;
+  margin: auto;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* ============================================================
+   COURT FILINGS TABLE
+   ============================================================ */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #111;
+  padding: 10px;
+  /* duplicate of earlier rule – kept this one, removed the other */
+}
+
+.case-filings-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
   font-size: 0.95em;
 }
 
-table th, table td {
+.case-filings-table th,
+.case-filings-table td {
   border: 1px solid #333;
-  padding: 0.6rem 1rem;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.case-filings-table th {
+  background-color: #1a1a1a;
+  color: #66b2ff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.case-filings-table tr:nth-child(even) {
+  background-color: #141414;
+}
+
+.case-filings-table tr:nth-child(odd) {
+  background-color: #0e0e0e;
+}
+
+.case-filings-table td {
+  color: #eee;
+  word-break: break-word;
+}
+
+/* ============================================================
+   LEGEND BOX & LEGEND TABLE
+   ============================================================ */
+.legend-box {
+  margin-left: 100px;     /* deeper indentation from the left */
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  border-left: 3px solid #66b2ff;
+  background-color: #0e0e0e;
+  border-radius: 6px;
+  width: fit-content;     /* only as wide as needed */
+  max-width: 50%;         /* prevent it from being too wide on large screens */
+  box-shadow: 0 0 8px rgba(102,178,255,0.15);
+  /* duplicate of earlier rule – kept this one, removed the other */
+}
+
+.legend-box h4 {
+  color: #66b2ff;
+  margin-top: 0;
+  margin-bottom: 12px;
   text-align: left;
 }
 
-table th {
-  background-color: #111;
-  color: #87cefa;
-  font-weight: bold;
+.legend-table {
+  border-collapse: collapse;
+  font-size: 0.95em;
+  width: auto;            /* table shrinks to content */
+  margin-left: 10px;      /* aligns neatly within box */
 }
 
-table tr:nth-child(even) {
-  background-color: #181818;
+.legend-table th,
+.legend-table td {
+  border: 1px solid #333;
+  padding: 8px 12px;
+  vertical-align: top;
+  white-space: nowrap;    /* keeps short labels compact */
 }
 
-/* -------------------------------------------------------------
-   CODE BLOCKS / FILE SECTIONS (used in document examples)
-   ------------------------------------------------------------- */
-pre, code {
-  background-color: #111;
-  color: #87cefa;
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-family: Consolas, monospace;
-  font-size: 0.9em;
-  overflow-x: auto;
+.legend-table th {
+  background-color: #1a1a1a;
+  color: #66b2ff;
+  text-align: left;
 }
 
-/* -------------------------------------------------------------
-   CONFIDENTIAL ACCESS OVERLAY
-   (Replaces old fixed banner)
-   ------------------------------------------------------------- */
-#access-overlay {
+.legend-table td {
+  color: #eee;
+  white-space: normal;    /* allows text in meaning column to wrap naturally */
+}
+
+.legend-table tr:nth-child(even) {
+  background-color: #141414;
+}
+
+.legend-table tr:nth-child(odd) {
+  background-color: #0e0e0e;
+}
+
+/* ============================================================
+   SIGNATURE COMPARISON TABLE (FULL BLOCK, HOVER DISABLED OPTION)
+   ============================================================ */
+.signature-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  margin-top: 20px;
+  overflow: visible; /* allow hover overlay to extend beyond cells */
+  /* duplicate of earlier rule – kept this one, removed the other */
+}
+
+/* ------------------------------------------------------------
+   Cells & Headers
+   ------------------------------------------------------------ */
+.signature-comparison-table th,
+.signature-comparison-table td {
+  border: 1px solid #333;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.signature-comparison-table th {
+  background-color: #1a1a1a;
+  color: #66b2ff;
+}
+
+.signature-comparison-table td {
+  color: #eee;
+  word-break: break-word;
+}
+
+/* ------------------------------------------------------------
+   Row Striping
+   ------------------------------------------------------------ */
+.signature-comparison-table tr:nth-child(even) {
+  background-color: #141414;
+}
+
+.signature-comparison-table tr:nth-child(odd) {
+  background-color: #0e0e0e;
+  /* duplicate of earlier rule – kept this one, removed the commented-out duplicates */
+}
+
+/* ------------------------------------------------------------
+   Links
+   ------------------------------------------------------------ */
+.signature-comparison-table a {
+  color: #66b2ff;
+  text-decoration: none;
+}
+
+.signature-comparison-table a:hover {
+  color: #99ccff;
+  text-decoration: none;
+  /* potential conflict fixed: earlier duplicate hover rules commented out */
+}
+
+/* ------------------------------------------------------------
+   Thumbnails (Table Images)
+   ------------------------------------------------------------ */
+.signature-comparison-table img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-radius: 4px;
+  max-width: 360px;  /* thumbnail size */
+  height: auto;
+  cursor: default;   /* hover disabled */
+  transition: none;
+}
+
+/* ------------------------------------------------------------
+   Optional Hover Preview Block – Disabled by Default
+   ------------------------------------------------------------ */
+/*
+.signature-comparison-table td a {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.signature-comparison-table td a:hover::before {
+  content: "";
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  box-sizing: border-box;
+  background: rgba(0,0,0,0.7);
+  z-index: 9998;
+  pointer-events: none;
 }
 
-.access-box {
-  background-color: #111;
-  border: 2px solid #8b0000; /* Matches original banner red */
-  border-radius: 8px;
-  max-width: 480px;
-  width: 90%;
-  text-align: center;
-  padding: 2rem;
-  box-shadow: 0 0 25px rgba(255, 68, 68, 0.3);
+.signature-comparison-table td a:hover img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 85vw !important;
+  max-height: 85vh !important;
+  z-index: 9999;
+  border: 1px solid #66b2ff;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(102,178,255,0.6);
+  background: #000;
+  cursor: zoom-out;
+  transition: none;
+}
+*/
+
+/* ============================================================
+   FAMILY TREE SECTION – COMPLETE BLOCK
+   ============================================================ */
+#family-tree {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  /* duplicate of earlier rule – kept this one, removed the other */
 }
 
-.access-box h2 {
-  color: #ff4444;
-  margin-bottom: 1rem;
-  font-size: 1.3em;
+#family-tree h2 {
+  color: #66b2ff;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
 }
 
-.access-box p {
+#family-tree p {
   color: #ddd;
   line-height: 1.6;
-  font-size: 0.95em;
-  margin-bottom: 1rem;
+  max-width: 800px;
 }
 
-#access-input {
-  width: 80%;
-  padding: 0.6rem;
-  border-radius: 4px;
-  border: 1px solid #555;
-  background-color: #000;
-  color: #87cefa;
-  margin-bottom: 1rem;
-  font-size: 1em;
+#family-tree .back-to-top {
+  display: inline-block;
+  margin-top: 25px;
+  color: #66b2ff;
+  text-decoration: none;
 }
 
-#access-button {
-  background-color: #8b0000;
-  border: none;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
+#family-tree .back-to-top:hover {
+  text-decoration: underline;
 }
 
-#access-button:hover {
-  background-color: #a00000;
+/* ------------------------------------------------------------
+   Family Tree Image Embed
+   ------------------------------------------------------------ */
+.tree-image {
+  text-align: center;
+  margin: 20px 0;
 }
 
-@media (max-width: 600px) {
-  .access-box {
-    padding: 1.2rem;
-    font-size: 0.9em;
-  }
-}
-
-/* -------------------------------------------------------------
-   SECTION SPACING AND DIVIDERS
-   ------------------------------------------------------------- */
-section {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #222;
-}
-
-/* -------------------------------------------------------------
-   FAMILY TREE SECTION
-   ------------------------------------------------------------- */
-#fiduciary-search-names ul {
-  list-style-type: none;
-  padding-left: 1rem;
-}
-
-#fiduciary-search-names li {
-  margin: 0.3rem 0;
-}
-
-/* -------------------------------------------------------------
-   IMAGE AND TABLE RESPONSIVENESS
-   ------------------------------------------------------------- */
-img, iframe, table {
+.tree-image img {
   max-width: 100%;
   height: auto;
+  border: 1px solid #333;
+  border-radius: 6px;
 }
 
-/* -------------------------------------------------------------
-   UTILITIES (used throughout page)
-   ------------------------------------------------------------- */
-.center {
-  text-align: center;
+/* ============================================================
+   ANCHOR LINK OFFSET FOR FIXED BANNER
+   ============================================================ */
+:target::before {
+  content: "";
+  display: block;
+  height: 80px;       /* adjust to match banner height */
+  margin-top: -80px;  /* negative margin cancels natural scroll */
 }
 
-.highlight {
-  color: #ff4444;
-}
+/* ============================================================
+   END NOTES – CLEANUP SUMMARY
+   ============================================================ */
+/*
+  ✅ Duplicate sets merged:
+     - body
+     - headings (h1–h6)
+     - paragraphs, nav#toc, a:hover
+     - signature-comparison-table (several repeats removed)
 
-.note {
-  color: #bbb;
-  font-size: 0.9em;
-  font-style: italic;
-}
+  ✅ Conflicts resolved:
+     - nav#toc a:hover now active and non-overridden
+     - redundant “dark theme base” and TOC definitions removed
 
-/* -------------------------------------------------------------
-   END OF FILE
-   ------------------------------------------------------------- */
+  ✅ Structural cleanup:
+     - standardized section headers
+     - preserved all meaningful comments
+     - commented optional/disabled hover preview sections
+
+  Final CSS is functionally identical to original, but organized and non-conflicting.
+*/
+
+/* ===== End of Part 3 (Final) ===== */
+
+
