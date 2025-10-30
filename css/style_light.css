@@ -280,13 +280,21 @@ nav#toc ul ul {
 /* ============================================================
    GLOBAL LINK STYLES
    ============================================================ */
+/* ============================================================
+   GLOBAL LINK STYLES – MATCHES TOC HOVER ANIMATION
+   ============================================================ */
 a {
   color: #1558b0;
   text-decoration: none;
+  display: inline-block; /* needed for scale transform */
+  transition:
+    color 0.3s ease,
+    transform 0.25s ease; /* smooth hover animation */
 }
 
 a:hover {
-  color: #ff0000; /* bright red hover accent */
+  color: #b30000; /* red hover accent to match TOC */
+  transform: scale(1.05); /* subtle enlargement */
   text-decoration: none;
 }
 
