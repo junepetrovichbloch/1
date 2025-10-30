@@ -32,7 +32,7 @@
 
 /* Heading inside the access box */
 .access-box h2 {
-  color: #FF0B12;                /* dark red heading text */
+  color: #000;                /* dark red heading text */
   margin-bottom: 20px;
 }
 
