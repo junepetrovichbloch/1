@@ -624,7 +624,7 @@ footer {
 
 /* ============================================================
    TRACK CHANGES STYLING
-   ============================================================ *
+   ============================================================ */
 .removed-text {
   color: #b30000 !important;       /* vivid red for deletions */
   text-decoration: line-through !important;
