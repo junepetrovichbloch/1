@@ -19,7 +19,7 @@
    ============================================================ */
 .access-box {
   background: #8b0000;              /* dark red box */
-  color: #333;                   /* default text color (light gray for general text) */
+  color: #000;                   /* default text color-general text) */
   padding: 30px 40px;
   border-radius: 8px;
   border: 3px solid #FF0B12;     /* bright red border */
@@ -38,7 +38,8 @@
 
 /* Paragraphs inside the access box */
 .access-box p {
-  color: #333333;                /* light gray paragraph text */
+  color: #000;                /* light gray paragraph text */
+  background: #8b0000;              /* dark red box */
   line-height: 1.5;
   margin-bottom: 16px;
 }
