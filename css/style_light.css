@@ -638,6 +638,32 @@ footer {
   font-weight: 500;
 }
 
+/* ============================================================
+   CONTACT SITE ADMIN BUTTON (GLOBAL VERSION)
+   ============================================================ */
+button.contact-admin {
+  display: block;
+  margin: 25px auto 0 auto; /* centers horizontally */
+  background-color: #0b5394; /* deep blue base */
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition:
+    background-color 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(11, 83, 148, 0.3); /* subtle blue depth */
+}
+
+button.contact-admin:hover {
+  background-color: #b30059; /* deep pink */
+  box-shadow: 0 0 22px rgba(255, 105, 180, 0.75); /* soft pink glow */
+  transform: scale(1.05); /* gentle lift */
+}
+
 
 
 /* ===== End of Part 3 (Final) ===== */
