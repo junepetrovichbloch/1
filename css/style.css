@@ -40,6 +40,11 @@
     0 0 55px rgba(11, 83, 148, 0.7);
 }
 
+.access-box p {
+  text-align: justify;
+  text-justify: inter-word; /* ensures spacing happens between words only */
+}
+
 /* Heading inside the access box */
 .access-box h2 {
   color: #b30000;
@@ -663,7 +668,6 @@ button.contact-admin:hover {
   box-shadow: 0 0 22px rgba(255, 105, 180, 0.75); /* soft pink glow */
   transform: scale(1.05); /* gentle lift */
 }
-
 
 
 /* ===== End of Part 3 (Final) ===== */
