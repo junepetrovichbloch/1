@@ -301,4 +301,46 @@ footer {
   margin-top: -80px;
 }
 
+/* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+#theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 40px;
+  z-index: 99999;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Dark theme style */
+body, html[data-theme='dark'] #theme-toggle {
+  background-color: #111;
+  color: #bfff0c;
+  border: 1px solid #bfff0c;
+}
+
+body, html[data-theme='dark'] #theme-toggle:hover {
+  background-color: #000;
+  color: #ff0;
+  border-color: #ff0;
+}
+
+/* Light theme style */
+html[data-theme='light'] #theme-toggle {
+  background-color: #f0f0f0;
+  color: #0b5394;
+  border: 1px solid #0b5394;
+}
+
+html[data-theme='light'] #theme-toggle:hover {
+  background-color: #e6e6e6;
+  color: #b30000;
+  border-color: #b30000;
+}
+
+
 /* ===== End of Light Theme ===== */
