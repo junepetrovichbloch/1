@@ -7,12 +7,12 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(248, 249, 250, 0.93); /* soft translucent veil */
+  background: rgba(248, 249, 250, 0.65); /* soft translucent veil */
   z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(4px); /* stronger blur for privacy */
+  backdrop-filter: blur(5px); /* stronger blur for privacy */
 }
 
 /* ============================================================
