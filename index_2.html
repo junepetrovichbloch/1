@@ -767,5 +767,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeLink   = document.getElementById("theme-link"); // your active <link>
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    themeLink.setAttribute("href", "css/style_light.css");
+  } else {
+    themeLink.setAttribute("href", "css/style_2.css"); // dark theme default
+  }
+
+  // Toggle click
+  themeToggle.addEventListener("click", function () {
+    const current = themeLink.getAttribute("href");
+    if (current.includes("style_2.css")) {
+      themeLink.setAttribute("href", "css/style_light.css");
+      localStorage.setItem("theme", "light");
+      themeToggle.textContent = "Switch to Dark Theme";
+    } else {
+      themeLink.setAttribute("href", "css/style_2.css");
+      localStorage.setItem("theme", "dark");
+      themeToggle.textContent = "Switch to Light Theme";
+    }
+  });
+});
+</script>
+
+  
 </body>
 </html>
