@@ -276,7 +276,7 @@ footer {
 }
 
 /* ============================================================
-   TABLES – COURT FILINGS & SIGNATURE COMPARISON &&&&&&&&&&&
+   TABLES – COURT FILINGS & SIGNATURE COMPARISON
    ============================================================ */
 .table-container {
   overflow-x: auto;
@@ -285,7 +285,6 @@ footer {
   border-radius: 4px;
   background-color: #111;
   padding: 10px;
-  /* duplicate of earlier rule – kept this one, removed the other */
 }
 
 .case-filings-table {
@@ -381,7 +380,7 @@ footer {
 }
 
 /* ============================================================
-   SIGNATURE COMPARISON TABLE (FULL BLOCK, HOVER DISABLED OPTION) &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+   SIGNATURE COMPARISON TABLE 
    ============================================================ */
 .table-container {
   overflow-x: auto;
@@ -435,6 +434,20 @@ footer {
 .signature-comparison-table a:hover {
   color: #b30000;
   text-decoration: none;
+}
+
+/* ------------------------------------------------------------
+   Thumbnails (Table Images)
+   ------------------------------------------------------------ */
+.signature-comparison-table img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-radius: 4px;
+  max-width: 360px;  /* thumbnail size */
+  height: auto;
+  cursor: default;   /* hover disabled */
+  transition: none;
 }
 
 /* ============================================================
