@@ -213,7 +213,7 @@
 
 #changelog-banner a:hover {
   color: #ffffff; /* white hover for contrast */
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
