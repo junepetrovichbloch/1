@@ -25,13 +25,13 @@
   border-radius: 8px;
   border: 3px solid #0b5394; /* deep blue border */
   box-shadow:
-    0 0 18px rgba(0, 0, 0, 0.25),    /* existing soft drop shadow */
-    0 0 12px rgba(11, 83, 148, 0.6); /* subtle blue glow around border */
+    0 0 25px rgba(0, 0, 0, 0.25),    /* deeper natural shadow */
+    0 0 35px rgba(11, 83, 148, 0.55); /* wider blue glow */
   max-width: 600px;
   width: 90%;
   text-align: center;
   box-sizing: border-box;
-  transition: box-shadow 0.3s ease-in-out; /* optional: smooth glow changes */
+  transition: box-shadow 0.4s ease-in-out;
 }
 
 /* Heading inside the access box */
