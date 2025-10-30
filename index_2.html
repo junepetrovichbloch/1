@@ -746,6 +746,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (value === passphrase) {
       sessionStorage.setItem("access_granted", "true");
       overlay.style.display = "none";
+      banner.style.display = "block"; 
       document.body.style.pointerEvents = "auto";
     } else {
       alert("Access denied. Please check the passphrase and try again.");
