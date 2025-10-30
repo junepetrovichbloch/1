@@ -23,12 +23,15 @@
   color: #222;
   padding: 30px 40px;
   border-radius: 8px;
-  border: 3px solid #b30000;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+  border: 3px solid #0b5394; /* deep blue border */
+  box-shadow:
+    0 0 18px rgba(0, 0, 0, 0.25),    /* existing soft drop shadow */
+    0 0 12px rgba(11, 83, 148, 0.6); /* subtle blue glow around border */
   max-width: 600px;
   width: 90%;
   text-align: center;
   box-sizing: border-box;
+  transition: box-shadow 0.3s ease-in-out; /* optional: smooth glow changes */
 }
 
 /* Heading inside the access box */
