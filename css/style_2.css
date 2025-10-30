@@ -39,7 +39,7 @@
 /* Paragraphs inside the access box */
 .access-box p {
   color: #fff;                
-  font-weight: bold; 
+  font-weight: normal; 
   background: #8b0000;             
   line-height: 1.5;
   margin-bottom: 16px;
