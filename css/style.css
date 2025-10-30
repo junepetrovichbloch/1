@@ -100,7 +100,7 @@ nav#toc a {
 }
 
 nav#toc a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* -------------->JAR #99ccff */
   text-decoration: none;
 }
 
@@ -141,7 +141,7 @@ a {
 }
 
 a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* -------------->JAR #99ccff */
   text-decoration: none; /* keeps underline off when hovered */
 }
 
@@ -314,7 +314,7 @@ footer {
 }
 
 .signature-comparison-table a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* -------------->JAR #99ccff */
   text-decoration: none;
 }
 
@@ -486,7 +486,7 @@ nav#toc a {
 
 /*====
 nav#toc a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* -------------->JAR #99ccff */
   text-decoration: none;
 }
 ====*/
@@ -528,7 +528,7 @@ a {
 }
 
 a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* -------------->JAR #99ccff */
   text-decoration: none; /* keeps underline off when hovered */
 }
 
@@ -706,7 +706,7 @@ footer {
 
 /* ====
 .signature-comparison-table a:hover {
-  color: #99ccff;
+  color: #bfff0c; /* -------------->JAR #99ccff */
   text-decoration: none;
 }
 ==== */
