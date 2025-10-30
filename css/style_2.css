@@ -110,12 +110,12 @@
    GLOBAL BASE STYLES – DARK THEME
    ============================================================ */
 body {
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-  background-color: #0a0a0a;   /* not pure black — very dark gray */
-  color: #d0d0d0;              /* darker gray for less glow */
+  font-family: "Inter", "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #d0d0d0;
   line-height: 1.8;
   margin: 40px;
-  padding-top: 60px;           /* ensures content not hidden by banner */
+  padding-top: 60px;
   box-sizing: border-box;
 }
 
