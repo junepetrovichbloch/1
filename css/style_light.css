@@ -177,36 +177,33 @@
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* #confidential-banner a:hover,
-/* #confidential-banner a:focus {
-  /* color: #e2f76f; 
-  /* text-shadow: 0 0 6px rgba(255, 217, 102, 0.6)
-  /* text-decoration: none;
-/* }
 
 /* ============================================================
    CHANGELOG BANNER (visible, same styling as confidential banner)
    ============================================================ */
 #changelog-banner {
+  display: none;              
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0b5394; /* same dark blue as confidential banner */
+  background-color: #0d385f; /* dark blue */
   color: #fff;
   text-align: center;
   font-weight: normal;
-  padding: 16px 25px;
+  padding: 16px 25px; /* increased horizontal padding */
   font-size: 0.95em;
   z-index: 9999;
-  border-bottom: 2px solid #3d85c6; /* lighter blue accent */
-  box-sizing: border-box;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  border-bottom: 2px solid #3d85c6; /* a lighter blue */
+  box-sizing: border-box;  /* ensures padding stays inside width */
+  word-wrap: break-word;   /* allows wrapping of long words */
+  overflow-wrap: break-word; /* ensures wrapping works across browsers */
   line-height: 1.5;
 }
 
-/* Link styling inside changelog banner */
+/* ============================================================
+   CONFIDENTIAL BANNER LINK COLORS
+   ============================================================ */
 #changelog-banner a {
   color: #b3e5ff; /* light sky blue */
   text-decoration: none; 
