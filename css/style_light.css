@@ -626,14 +626,16 @@ footer {
    TRACK CHANGES STYLING
    ============================================================ *
 .removed-text {
-  color: #b30000;          /* red for deletions */
-  text-decoration: line-through;
-  background-color: #ffe5e5; /* faint pink background for visibility */
+  color: #b30000 !important;       /* vivid red for deletions */
+  text-decoration: line-through !important;
+  background-color: #ffe6e6 !important; /* subtle pink highlight */
+  font-weight: 500;
 }
 
 .added-text {
-  color: #007a00;          /* dark green for insertions */
-  background-color: #e6ffe6; /* light green background */
+  color: #007a00 !important;       /* strong green for insertions */
+  background-color: #e6ffe6 !important; /* subtle green highlight */
+  font-weight: 500;
 }
 
 
