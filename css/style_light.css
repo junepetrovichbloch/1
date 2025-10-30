@@ -1,0 +1,304 @@
+/* ============================================================
+   LIGHT THEME – BASE STYLES
+   ============================================================ */
+body {
+  font-family: "Inter", "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa;  /* very light gray background */
+  color: #222;                /* dark gray text */
+  line-height: 1.8;
+  margin: 40px;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   GLOBAL READABILITY IMPROVEMENTS
+   ============================================================ */
+p {
+  color: #222;
+  line-height: 1.85;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+li {
+  color: #222;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  word-spacing: 1px;
+}
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+h1 {
+  font-size: 2em;
+  color: #0b5394; /* deep blue */
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #1558b0;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.3em;
+  color: #1c6dd0;
+}
+
+h4 {
+  font-size: 1.1em;
+  color: #3c8dee;
+}
+
+h5, h6 {
+  font-size: 1em;
+  color: #377bce;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+a {
+  color: #1558b0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff0000; /* bright red hover accent */
+  text-decoration: none;
+}
+
+/* ============================================================
+   NAVIGATION – TABLE OF CONTENTS (TOC)
+   ============================================================ */
+nav#toc {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+nav#toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav#toc li {
+  margin: 8px 0;
+}
+
+nav#toc a {
+  color: #0b5394;
+  text-decoration: none;
+}
+
+nav#toc a:hover {
+  color: #b30000; /* red hover */
+  text-decoration: none;
+}
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 0.9em;
+  background-color: #f0f0f0;
+  padding: 6px 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #0b5394;
+}
+
+.back-to-top:hover {
+  background-color: #e8e8e8;
+}
+
+/* ============================================================
+   IMAGES
+   ============================================================ */
+img {
+  display: block;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 50px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  text-align: center;
+}
+/* ============================================================
+   TABLES – COURT FILINGS & SIGNATURE COMPARISON
+   ============================================================ */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.case-filings-table,
+.signature-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.case-filings-table th,
+.signature-comparison-table th {
+  background-color: #f0f0f0;
+  color: #0b5394;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.case-filings-table td,
+.signature-comparison-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  color: #222;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.case-filings-table tr:nth-child(even),
+.signature-comparison-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.case-filings-table tr:nth-child(odd),
+.signature-comparison-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.signature-comparison-table a {
+  color: #0b5394;
+  text-decoration: none;
+}
+
+.signature-comparison-table a:hover {
+  color: #b30000;
+  text-decoration: none;
+}
+
+/* ============================================================
+   LEGEND BOX & LEGEND TABLE
+   ============================================================ */
+.legend-box {
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  border-left: 3px solid #0b5394;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  width: fit-content;
+  max-width: 50%;
+  box-shadow: 0 0 8px rgba(11,83,148,0.15);
+}
+
+.legend-box h4 {
+  color: #0b5394;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.legend-table {
+  border-collapse: collapse;
+  font-size: 0.95em;
+  width: auto;
+  margin-left: 10px;
+}
+
+.legend-table th,
+.legend-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.legend-table th {
+  background-color: #f0f0f0;
+  color: #0b5394;
+  text-align: left;
+}
+
+.legend-table td {
+  color: #222;
+  white-space: normal;
+}
+
+.legend-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.legend-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* ============================================================
+   FAMILY TREE SECTION
+   ============================================================ */
+#family-tree {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+#family-tree h2 {
+  color: #0b5394;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+#family-tree p {
+  color: #222;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.tree-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.tree-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   ANCHOR LINK OFFSET FOR FIXED BANNER
+   ============================================================ */
+:target::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+}
+
+/* ===== End of Light Theme ===== */
