@@ -154,7 +154,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0d3d67; /* dark blue */
+  background-color: #0d385f; /* dark blue */
   color: #fff;
   text-align: center;
   font-weight: normal;
@@ -166,6 +166,22 @@
   word-wrap: break-word;   /* allows wrapping of long words */
   overflow-wrap: break-word; /* ensures wrapping works across browsers */
   line-height: 1.5;
+}
+
+/* ============================================================
+   CONFIDENTIAL BANNER LINK COLORS
+   ============================================================ */
+#confidential-banner a {
+  color: #b3e5ff; /* light sky blue */
+  text-decoration: underline; /* improves visibility on dark background */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#confidential-banner a:hover,
+#confidential-banner a:focus {
+  color: #ffd966; /* warm gold for hover contrast */
+  text-shadow: 0 0 6px rgba(255, 217, 102, 0.6); /* subtle glow on hover */
+  text-decoration: none;
 }
 
 /* ============================================================
@@ -292,9 +308,6 @@ nav#toc ul ul {
 
 /* ============================================================
    GLOBAL LINK STYLES
-   ============================================================ */
-/* ============================================================
-   GLOBAL LINK STYLES – MATCHES TOC HOVER ANIMATION
    ============================================================ */
 a {
   color: #1558b0;
