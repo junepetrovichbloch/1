@@ -171,7 +171,7 @@ h5, h6 {
 }
 
 /* ============================================================
-   PARAGRAPHS & LISTS  &&&&&&&&
+   PARAGRAPHS & LISTS 
    ============================================================ */
 ul {
   list-style-type: square;
@@ -179,7 +179,10 @@ ul {
 }
 
 li {
-  color: #ddd;
+  color: #222; /* matches paragraph and normal body text */
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  word-spacing: 1px;
 }
 
 /* ============================================================
