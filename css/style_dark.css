@@ -177,12 +177,6 @@ h5, h6 {
 /* ============================================================
    PARAGRAPHS & LISTS
    ============================================================ */
-/* p {===========================================================================XXXXXXXXXXXXXXXXXXXXX
-  margin-bottom: 15px;
-  text-align: justify;
-  color: #ddd;
-  /* duplicate of earlier rule – kept this one, removed the other */
-} */
 
 ul {
   list-style-type: square;
@@ -566,25 +560,44 @@ footer {
 }
 
 /* ============================================================
-   END NOTES – CLEANUP SUMMARY
+   THEME TOGGLE BUTTON
    ============================================================ */
-/*
-  ✅ Duplicate sets merged:
-     - body
-     - headings (h1–h6)
-     - paragraphs, nav#toc, a:hover
-     - signature-comparison-table (several repeats removed)
+#theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 40px;
+  z-index: 99999;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
 
-  ✅ Conflicts resolved:
-     - nav#toc a:hover now active and non-overridden
-     - redundant “dark theme base” and TOC definitions removed
+/* Dark theme style */
+body, html[data-theme='dark'] #theme-toggle {
+  background-color: #111;
+  color: #bfff0c;
+  border: 1px solid #bfff0c;
+}
 
-  ✅ Structural cleanup:
-     - standardized section headers
-     - preserved all meaningful comments
-     - commented optional/disabled hover preview sections
+body, html[data-theme='dark'] #theme-toggle:hover {
+  background-color: #000;
+  color: #ff0;
+  border-color: #ff0;
+}
 
-  Final CSS is functionally identical to original, but organized and non-conflicting.
-*/
+/* Light theme style */
+html[data-theme='light'] #theme-toggle {
+  background-color: #f0f0f0;
+  color: #0b5394;
+  border: 1px solid #0b5394;
+}
+
+html[data-theme='light'] #theme-toggle:hover {
+  background-color: #e6e6e6;
+  color: #b30000;
+  border-color: #b30000;
+}
 
 /* ===== End of Part 3 (Final) ===== */
