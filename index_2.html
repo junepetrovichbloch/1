@@ -33,14 +33,16 @@
   <div id="confidential-banner">
    <strong>✏️ UPDATE NOTICE: This site is updated periodically for corrections and improvements. For a record of changes, see the <a href="/changelog.html" target="_blank" rel="noopener noreferrer">Site Changelog</a>.</strong>
 </div>
+
+<button id="theme-toggle"
+        style="position:fixed;top:70px;right:40px;z-index:99999;">
+  Switch to Light Theme
+</button>
   
   <header id="top">
     <h1>Contested Estate of June Petrovich Bloch (<a href="https://www.legacy.com/us/obituaries/statesman/name/june-bloch-obituary?id=59092423" target="_blank" rel="noopener noreferrer">Obituary</a>)</h1>
     <h2>Prepared for Fiduciary Trust International</h2>
     <p>By Jaden Alexandra Riley (Decedent's Niece; <a href="./img/JRiley_SAFEAlliance_HospiceAustin.jpg" target="_blank" rel="noopener noreferrer">photo</a>)</p>
-      <button id="theme-toggle" style="position:absolute;top:20px;right:40px;z-index:99999;">
-    Switch to Light Theme
-  </button>
   </header>
 
 <nav id="toc">
@@ -775,31 +777,34 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const themeToggle = document.getElementById("theme-toggle");
-  const themeLink   = document.getElementById("theme-link"); // your active <link>
+  const themeLink   = document.getElementById("theme-link");
 
   // Load saved theme
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "light") {
     themeLink.setAttribute("href", "css/style_light.css");
+    themeToggle.textContent = "Switch to Dark Theme";
   } else {
-    themeLink.setAttribute("href", "css/style_2.css"); // dark theme default
+    themeLink.setAttribute("href", "css/style_dark.css");
+    themeToggle.textContent = "Switch to Light Theme";
   }
 
   // Toggle click
   themeToggle.addEventListener("click", function () {
     const current = themeLink.getAttribute("href");
-    if (current.includes("style_2.css")) {
+    if (current.includes("style_dark.css")) {
       themeLink.setAttribute("href", "css/style_light.css");
       localStorage.setItem("theme", "light");
       themeToggle.textContent = "Switch to Dark Theme";
     } else {
-      themeLink.setAttribute("href", "css/style_2.css");
+      themeLink.setAttribute("href", "css/style_dark.css");
       localStorage.setItem("theme", "dark");
       themeToggle.textContent = "Switch to Light Theme";
     }
   });
 });
 </script>
+
 
   
 </body>
