@@ -179,15 +179,15 @@
 
 
 /* ============================================================
-   CHANGELOG BANNER (visible, identical to main page banner)
+   CHANGELOG BANNER (visible, same styling as main site banner)
    ============================================================ */
 #changelog-banner {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  display: block; /* ensures visibility */
-  background-color: #0b5394; /* matches main site banner color */
+  display: block;
+  background-color: #0b5394; /* deep blue to match site header */
   color: #fff;
   text-align: center;
   font-weight: normal;
@@ -195,7 +195,7 @@
   padding: 16px 25px;
   font-size: 0.95em;
   z-index: 9999;
-  border-bottom: 2px solid #3d85c6;
+  border-bottom: 2px solid #3d85c6; /* lighter blue accent */
   box-sizing: border-box;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -204,9 +204,14 @@
 
 /* Links inside changelog banner */
 #changelog-banner a {
-  color: #b3e5ff; /* light sky blue */
+  color: #b3e5ff; /* light sky blue link */
   text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#changelog-banner a:hover {
+  color: #ffffff; /* bright white hover for contrast */
+  text-decoration: underline;
 }
 
 /* ============================================================
