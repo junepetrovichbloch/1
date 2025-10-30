@@ -105,12 +105,12 @@
 }
 
 /* ============================================================
-   CONTACT SITE ADMIN BUTTON – PINK BASE, GREEN GLOW
+   CONTACT SITE ADMIN BUTTON – DARK BLUE BASE, PINK GLOW HOVER
    ============================================================ */
 .access-box button.contact-admin {
   display: block;
   margin: 25px auto 0 auto; /* centers horizontally */
-  background-color: #b30059; /* rich pink base */
+  background-color: #0b5394; /* deep blue base */
   color: #fff;
   border: none;
   padding: 10px 22px;
@@ -121,15 +121,16 @@
     background-color 0.4s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  box-shadow: 0 0 12px rgba(179, 0, 89, 0.4); /* soft pink shadow */
+  box-shadow: 0 0 10px rgba(11, 83, 148, 0.3); /* subtle blue depth */
 }
 
-/* Hover – bright green glow with slight scale-up */
+/* Hover – switch to pink and glow softly */
 .access-box button.contact-admin:hover {
-  background-color: #b30059; /* keep pink base */
-  box-shadow: 0 0 25px rgba(0, 255, 0, 0.85); /* bright green glow */
-  transform: scale(1.05);
+  background-color: #b30059; /* deep pink */
+  box-shadow: 0 0 22px rgba(255, 105, 180, 0.75); /* soft pink glow */
+  transform: scale(1.05); /* gentle lift */
 }
+
 
 /* ============================================================
    CONFIDENTIAL BANNER
