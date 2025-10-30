@@ -104,6 +104,32 @@
   transform: scale(1.03); /* gentle enlargement on hover */
 }
 
+/* ============================================================
+   CONTACT SITE ADMIN BUTTON – STYLED VERSION
+   ============================================================ */
+.access-box button.contact-admin {
+  display: block;
+  margin: 25px auto 0 auto; /* centers the button horizontally */
+  background-color: #0b5394; /* same dark blue as box border */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition:
+    background-color 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(11, 83, 148, 0.3);
+}
+
+/* Hover effect – pink glow + slight scale-up */
+.access-box button.contact-admin:hover {
+  background-color: #b30059; /* deep pink tone */
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.7); /* soft pink glow */
+  transform: scale(1.05);
+}
 
 /* ============================================================
    CONFIDENTIAL BANNER
