@@ -131,6 +131,19 @@
   transform: scale(1.05); /* gentle lift */
 }
 
+/* ============================================================
+   HIGHLIGHT BOXES / CALLOUT SECTIONS
+   ============================================================ */
+.highlight-box {
+  background-color: #cce5f6; /* soft light blue background */
+  border-left: 4px solid #0b5394; /* dark blue accent bar */
+  color: #0b2545; /* dark navy text */
+  padding: 14px 18px;
+  margin: 20px 0;
+  border-radius: 4px;
+  line-height: 1.75;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
 /* ============================================================
    CONFIDENTIAL BANNER
