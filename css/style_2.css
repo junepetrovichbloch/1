@@ -61,10 +61,10 @@
 
 /* when the password box is clicked (active / focused) */
 .access-box input[type="password"]:focus {
-  border-color: #bfff0c;       /* border color when active */
-  outline: none;               /* removes default blue outline */
-  background-color: #000;   /* optional: slightly lighter background */
-  color: #bfff0c;              /* keep same text color (or change if desired) */
+  border-color: #bfff0c;       
+  outline: none;               
+  background-color: #000;  
+  color: #bfff0c;              
 }
 
 .access-box button {
@@ -79,7 +79,8 @@
 
 .access-box button:hover {
   background-color: #000;  
-  border-color: #bfff0c;
+  border: 1px solid #bfff0c;
+  color: #bfff0c;
 }
 
 /* ============================================================
