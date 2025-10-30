@@ -78,7 +78,8 @@
 }
 
 .access-box button:hover {
-  background-color: #000;    
+  background-color: #000;  
+  border-color: #bfff0c;
 }
 
 /* ============================================================
