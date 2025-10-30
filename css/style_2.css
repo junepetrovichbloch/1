@@ -110,9 +110,9 @@
    GLOBAL BASE STYLES – DARK THEME
    ============================================================ */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #ddd;             /* slightly dimmer than white */
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  background-color: #0a0a0a;  /* not pure black — very dark gray */
+  color: #e5e5e5;             /* slightly softer white */
   line-height: 1.76;
   margin: 40px;
   padding-top: 60px;       /* ensures content not hidden by banner */
@@ -128,8 +128,8 @@ body {
 p {
   color: #e0e0e0;          /* slightly softer white – reduces eye strain */
   line-height: 1.85;       /* increases vertical spacing between lines */
-  letter-spacing: 0.3px;   /* adds subtle space between characters */
-  word-spacing: 1px;       /* improves horizontal readability */
+  letter-spacing: 0.5px;   /* adds subtle space between characters */
+  word-spacing: 1.2px;       /* improves horizontal readability */
   text-align: justify;
 }
 
