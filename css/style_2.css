@@ -121,6 +121,27 @@ body {
 }
 
 /* ============================================================
+   GLOBAL READABILITY IMPROVEMENTS – APPLIES SITEWIDE
+   ============================================================ */
+
+/* Applies to all paragraph text across the website */
+p {
+  color: #e0e0e0;          /* slightly softer white – reduces eye strain */
+  line-height: 1.85;       /* increases vertical spacing between lines */
+  letter-spacing: 0.3px;   /* adds subtle space between characters */
+  word-spacing: 1px;       /* improves horizontal readability */
+  text-align: justify;
+}
+
+/* Optional: slightly lighter color for list text too */
+li {
+  color: #e0e0e0;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  word-spacing: 1px;
+}
+
+/* ============================================================
    HEADINGS
    ============================================================ */
 h1 {
@@ -155,12 +176,12 @@ h5, h6 {
 /* ============================================================
    PARAGRAPHS & LISTS
    ============================================================ */
-p {
+/* p {===========================================================================XXXXXXXXXXXXXXXXXXXXX
   margin-bottom: 15px;
   text-align: justify;
   color: #ddd;
   /* duplicate of earlier rule – kept this one, removed the other */
-}
+} */
 
 ul {
   list-style-type: square;
