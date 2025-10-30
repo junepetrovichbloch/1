@@ -622,6 +622,21 @@ footer {
   margin-top: -80px;
 }
 
+/* ============================================================
+   TRACK CHANGES STYLING
+   ============================================================ *
+.removed-text {
+  color: #b30000;          /* red for deletions */
+  text-decoration: line-through;
+  background-color: #ffe5e5; /* faint pink background for visibility */
+}
+
+.added-text {
+  color: #007a00;          /* dark green for insertions */
+  background-color: #e6ffe6; /* light green background */
+}
+
+
 /* ===== End of Part 3 (Final) ===== */
 
 
