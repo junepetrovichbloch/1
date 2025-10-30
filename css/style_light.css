@@ -177,14 +177,13 @@
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* ===
-#confidential-banner a:hover,
-#confidential-banner a:focus {
-  color: #e2f76f; 
-  text-shadow: 0 0 6px rgba(255, 217, 102, 0.6); /* subtle glow on hover */
-  text-decoration: none;
-}
-=== */
+/* #confidential-banner a:hover,
+/* #confidential-banner a:focus {
+  /* color: #e2f76f; 
+  /* text-shadow: 0 0 6px rgba(255, 217, 102, 0.6)
+  /* text-decoration: none;
+/* }
+
 
 /* ============================================================
    GLOBAL BASE STYLES – LIGHT THEME
