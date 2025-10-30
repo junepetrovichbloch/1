@@ -730,6 +730,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 1. Hide overlay immediately if already authorized
   if (sessionStorage.getItem("access_granted") === "true") {
     overlay.style.display = "none";
+    banner.style.display = "block"; // ← show banner again after refresh
     document.body.style.pointerEvents = "auto";
     return;
   }
@@ -744,7 +745,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (value === passphrase) {
       sessionStorage.setItem("access_granted", "true");
       overlay.style.display = "none";
-      banner.style.display = "block"; 
+      banner.style.display = "block"; // ← show banner on successful login
       document.body.style.pointerEvents = "auto";
     } else {
       alert("Access denied. Please check the passphrase and try again.");
