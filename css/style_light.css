@@ -179,37 +179,35 @@
 
 
 /* ============================================================
-   CHANGELOG BANNER (visible, same styling as confidential banner)
+   CHANGELOG BANNER (visible, identical to main page banner)
    ============================================================ */
 #changelog-banner {
-  display: none;              
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0d385f; /* dark blue */
+  display: block; /* ensures visibility */
+  background-color: #0b5394; /* matches main site banner color */
   color: #fff;
   text-align: center;
   font-weight: normal;
-  padding: 16px 25px; /* increased horizontal padding */
+  letter-spacing: 0.2px;
+  padding: 16px 25px;
   font-size: 0.95em;
   z-index: 9999;
-  border-bottom: 2px solid #3d85c6; /* a lighter blue */
-  box-sizing: border-box;  /* ensures padding stays inside width */
-  word-wrap: break-word;   /* allows wrapping of long words */
-  overflow-wrap: break-word; /* ensures wrapping works across browsers */
+  border-bottom: 2px solid #3d85c6;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   line-height: 1.5;
 }
 
-/* ============================================================
-   CONFIDENTIAL BANNER LINK COLORS
-   ============================================================ */
+/* Links inside changelog banner */
 #changelog-banner a {
   color: #b3e5ff; /* light sky blue */
-  text-decoration: none; 
+  text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 
 /* ============================================================
    GLOBAL BASE STYLES – LIGHT THEME
