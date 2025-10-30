@@ -111,34 +111,35 @@
    ============================================================ */
 body {
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-  background-color: #0a0a0a;  /* not pure black — very dark gray */
-  color: #e5e5e5;             /* slightly softer white */
-  line-height: 1.76;
+  background-color: #0a0a0a;   /* not pure black — very dark gray */
+  color: #d0d0d0;              /* darker gray for less glow */
+  line-height: 1.8;
   margin: 40px;
-  padding-top: 60px;       /* ensures content not hidden by banner */
+  padding-top: 60px;           /* ensures content not hidden by banner */
   box-sizing: border-box;
-  /* duplicate of earlier rule – kept this one, removed the other */
 }
 
 /* ============================================================
    GLOBAL READABILITY IMPROVEMENTS – APPLIES SITEWIDE
    ============================================================ */
 
-/* Applies to all paragraph text across the website */
+/* Paragraph text */
 p {
-  color: #e0e0e0;          /* slightly softer white – reduces eye strain */
-  line-height: 1.85;       /* increases vertical spacing between lines */
-  letter-spacing: 0.5px;   /* adds subtle space between characters */
-  word-spacing: 1.2px;       /* improves horizontal readability */
+  color: #d0d0d0;              /* slightly darker text for reduced glare */
+  line-height: 1.9;            /* more vertical breathing room */
+  letter-spacing: 0.5px;       /* subtle horizontal spacing */
+  word-spacing: 1.2px;
+  text-shadow: 0 0 2px #000;   /* gentle black shadow to soften edge glow */
   text-align: justify;
+  margin-bottom: 15px;         /* preserve your spacing */
 }
 
-/* Optional: slightly lighter color for list text too */
+/* Lists */
 li {
-  color: #e0e0e0;
+  color: #d0d0d0;              /* match paragraph text color */
   line-height: 1.8;
-  letter-spacing: 0.2px;
-  word-spacing: 1px;
+  letter-spacing: 0.3px;
+  word-spacing: 1.1px;
 }
 
 /* ============================================================
