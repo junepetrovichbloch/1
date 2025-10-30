@@ -186,16 +186,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  display: block;
+  display: flex;               /* ensures perfect centering */
+  align-items: center;         /* vertical centering */
+  justify-content: center;     /* horizontal centering */
   background-color: #0d385f; /* dark blue */
-  color: #fff;
+  color: #ffffff;              /* pure white text */
+  font-weight: bold;           /* ensures text appears strong */
   text-align: center;
-  font-weight: normal;
   letter-spacing: 0.2px;
   padding: 16px 25px;
   font-size: 0.95em;
   z-index: 9999;
-  border-bottom: 2px solid #3d85c6; /* lighter blue accent */
+  border-bottom: 2px solid #3d85c6; /* lighter blue accent line */
   box-sizing: border-box;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -204,15 +206,16 @@
 
 /* Links inside changelog banner */
 #changelog-banner a {
-  color: #b3e5ff; /* light sky blue link */
+  color: #b3e5ff; /* light sky blue */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 #changelog-banner a:hover {
-  color: #ffffff; /* bright white hover for contrast */
+  color: #ffffff; /* white hover for contrast */
   text-decoration: underline;
 }
+
 
 /* ============================================================
    GLOBAL BASE STYLES – LIGHT THEME
